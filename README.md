@@ -1,12 +1,12 @@
 # End-to-end-Object-Detection-Project
 
 ## Workflows
-constants
-config_entity
-artifact_entity
-components
-pipeline
-app.py
+- constants
+- config_entity
+- artifact_entity
+- components
+- pipeline
+- app.py
 
 ## Project Configuration
 
@@ -14,6 +14,7 @@ app.py
 #install aws cli from the following link
 
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+```
 
 ```bash
 #Configure aws crediential (secret key & access key)
@@ -21,7 +22,9 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 aws configure
 ```
 
+```bash
 #Create a s3 bucket for model pusher. name is mentioned in the constant
+```
 
 ## How to run:
 ```bash
