@@ -1,9 +1,14 @@
 FROM python:3.7-slim-buster
 
-RUN apt update -y && apt install awscli -y
+# Install dependencies
+RUN apt-get update -y && apt-get install -y unzip curl \
+    && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
+    && unzip awscliv2.zip \
+    && ./aws/install \
+    && rm -rf awscliv2.zip aws \
+    && apt-get clean
+
 WORKDIR /app
+COPY . .
 
-COPY . /app
-RUN pip install -r requirements.txt
-
-CMD ["python3", "app.py"]
+CMD ["python", "app.py"]
