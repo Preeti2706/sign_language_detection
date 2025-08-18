@@ -2,7 +2,7 @@
 
 sudo apt update 
 
-sudo apt install openjdk-8-jdk -y
+sudo apt install openjdk-17-jdk -y
 
 https://pkg.jenkins.io/
 https://pkg.jenkins.io/debian-stable/
